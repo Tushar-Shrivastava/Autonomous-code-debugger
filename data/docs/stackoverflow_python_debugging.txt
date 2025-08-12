@@ -1,0 +1,116 @@
+Yes! There's a Python debugger called pdb just for doing that!
+
+You can launch a Python program through pdb via python -m pdb myscript.py.
+
+There are a few commands you can then issue, which are documented on the pdb page.
+
+Some useful ones to remember are:
+
+b: set a breakpoint
+c: continue debugging until you hit a breakpoint
+s: step through the code
+n: to go to next line of code
+l: list source code for the current file (default: 11 lines including the line being executed)
+u: navigate up a stack frame
+d: navigate down a stack frame
+p: to print the value of an expression in the current context
+If you don't want to use a command line debugger, some IDEs like Pydev, Wing IDE or PyCharm have a GUI debugger. Wing and PyCharm are commercial products, but Wing has a free "Personal" edition, and PyCharm has a free community edition.
+
+First step is to make the Python interpreter enter into the debugging mode.
+
+A. From the Command Line
+
+Most straight forward way, running from command line, of python interpreter
+
+$ python -m pdb scriptName.py
+> .../pdb_script.py(7)<module>()
+-> """
+(Pdb)
+B. Within the Interpreter
+
+While developing early versions of modules and to experiment it more iteratively.
+
+$ python
+Python 2.7 (r27:82508, Jul  3 2010, 21:12:11)
+[GCC 4.0.1 (Apple Inc. build 5493)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pdb_script
+>>> import pdb
+>>> pdb.run('pdb_script.MyObj(5).go()')
+> <string>(1)<module>()
+(Pdb)
+C. From Within Your Program
+
+For a big project and long-running module, can start the debugging from inside the program using import pdb and set_trace() like this:
+
+#!/usr/bin/env python
+# encoding: utf-8
+#
+
+import pdb
+
+class MyObj(object):
+    count = 5
+    def __init__(self):
+        self.count= 9
+
+    def go(self):
+        for i in range(self.count):
+            pdb.set_trace()
+            print i
+        return
+
+if __name__ == '__main__':
+    MyObj(5).go()
+Step-by-Step debugging to go into more internal
+
+Execute the next statement… with “n” (next)
+
+Repeating the last debugging command… with ENTER
+
+Quitting it all… with “q” (quit)
+
+Printing the value of variables… with “p” (print)
+
+a) p a
+
+Turning off the (Pdb) prompt… with “c” (continue)
+
+Seeing where you are… with “l” (list)
+
+Stepping into subroutines… with “s” (step into)
+
+Continuing… but just to the end of the current subroutine… with “r” (return)
+
+Assign a new value
+
+a) !b = "B"
+
+Set a breakpoint
+
+a) break linenumber
+
+b) break functionname
+
+c) break filename:linenumber
+
+Temporary breakpoint
+
+a) tbreak linenumber
+
+Conditional breakpoint
+
+a) break linenumber, condition
+
+Note: All these commands should be executed from pdb
+
+For in-depth knowledge, refer:
+
+https://pymotw.com/2/pdb/
+
+https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/
+
+Amount of CPU memory doesn't matter at all -- when you're trying to run the model on your GPU, it's only VRAM that counts in this context. (This is a place where users of Apple's arm-based systems presently get to be smug -- having unified memory means that it all counts) – 
+Charles Duffy
+ CommentedFeb 13, 2024 at 17:10 
+Your model "HuggingFaceH4/mistral-7b-sft-beta" would take around very close 16 GB. So I would suggest to use a smaller model. Or a bigger machine. Also make sure all of your 4 GPUs will get utilized when you the pipeline running.

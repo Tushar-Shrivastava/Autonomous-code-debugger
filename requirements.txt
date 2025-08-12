@@ -1,0 +1,12 @@
+langchain
+langgraph             # pip install langgraph
+chromadb
+sentence-transformers
+transformers
+huggingface-hub
+anthropic
+streamlit
+python-dotenv
+tqdm
+docker               # optional, only needed if you run sandbox via docker
+re
