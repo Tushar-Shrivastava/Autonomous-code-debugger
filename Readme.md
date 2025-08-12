@@ -55,5 +55,20 @@ autonomous-code-debugger/
 ├── requirements.txt                 # Python dependencies
 └── README.md                        # Project documentation
 ```
+## Screenshots:- 
+
+<img width="1859" height="866" alt="Code_debugger_ui" src="https://github.com/user-attachments/assets/d64ef187-e85a-46ba-8ffd-4c8b49d86674" />
+<img width="684" height="795" alt="Building_vector_store" src="https://github.com/user-attachments/assets/89dbc55c-34ff-4e42-9779-f8f9ca11d829" />
+<img width="1733" height="642" alt="Attempt_3" src="https://github.com/user-attachments/assets/f726fdcf-52a7-4825-b560-7f6eb2e27733" />
+<img width="1139" height="712" alt="Attempt_2" src="https://github.com/user-attachments/assets/647324cb-613c-4f85-b4fa-af812ff5cb93" />
+<img width="1829" height="746" alt="Attempt_1" src="https://github.com/user-attachments/assets/85ebaa0c-aead-4f04-9f96-e84e75a27f2c" />
+<img width="659" height="472" alt="Successfull" src="https://github.com/user-attachments/assets/e20a85a6-7747-406c-8e05-b0c001a4f73b" />
+<img width="1821" height="811" alt="Not_an_error_imput" src="https://github.com/user-attachments/assets/460620cc-4c7f-412c-af8d-d355f644d603" />
+<img width="1827" height="798" alt="Fixed_output" src="https://github.com/user-attachments/assets/0cfbaa1d-2a38-4767-b904-828f074a6c35" />
+<img width="1836" height="432" alt="Different_language_input" src="https://github.com/user-attachments/assets/8c8f61ee-2052-4fe2-9436-cff4f9a8fada" />
+
+
+
+
 📜 License
 MIT — free to use, modify, and share.
